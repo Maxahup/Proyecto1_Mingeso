@@ -1,59 +1,32 @@
 package Models;
 
-import java.util.Date;
 
+import com.sun.istack.NotNull;
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+@Data
 public class Empleado {
-    private String Nombre;
+    @Id
+    @Column(name = "id")
+    private Integer id;
+    @NotNull
+    private String Nombres;
+    @NotNull
+    private String Apellidos;
+    @NotNull
     private String Rut;
+    @NotNull
     private char Categoria;
-    private double SueldoBruto;
-    private Date FechaContratacion;
+    @NotNull
+    private float Sueldo_bruto;
+    @NotNull
+    private int anno_contratacion;
+    @NotNull
+    private int mes_contratacion;
 
-    public Empleado(String nombre, String rut, char categoria, double sueldoBruto, Date fechaContratacion) {
-        Nombre = nombre;
-        Rut = rut;
-        Categoria = categoria;
-        SueldoBruto = sueldoBruto;
-        FechaContratacion = fechaContratacion;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
-
-    public String getRut() {
-        return Rut;
-    }
-
-    public void setRut(String rut) {
-        Rut = rut;
-    }
-
-    public char getCategoria() {
-        return Categoria;
-    }
-
-    public void setCategoria(char categoria) {
-        Categoria = categoria;
-    }
-
-    public double getSueldoBruto() {
-        return SueldoBruto;
-    }
-
-    public void setSueldoBruto(double sueldoBruto) {
-        SueldoBruto = sueldoBruto;
-    }
-
-    public Date getFechaContratacion() {
-        return FechaContratacion;
-    }
-
-    public void setFechaContratacion(Date fechaContratacion) {
-        FechaContratacion = fechaContratacion;
-    }
 }
