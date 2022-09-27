@@ -8,11 +8,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/Admin")
+@RequestMapping("/admin")
 public class AdminController {
 
     @Autowired
@@ -21,5 +22,10 @@ public class AdminController {
         Page<Empleado> empleados = empleadoRepository.findAll(pageable);
 
         return new ModelAndView("index").addObject("empleados", empleados);
+    }
+    @GetMapping("/fichero/subir")
+    ModelAndView cargarArchivo(){
+        return new ModelAndView("admin/subir-archivo");
+
     }
 }
