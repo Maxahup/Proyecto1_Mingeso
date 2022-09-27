@@ -1,6 +1,6 @@
-package Repositories;
+package com.example.Proyecto_Mingeso.Repositories;
 
-import Models.Empleado;
+import com.example.Proyecto_Mingeso.Models.Empleado;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmpleadoRepository extends JpaRepository<Empleado, Integer> {

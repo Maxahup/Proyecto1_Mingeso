@@ -1,4 +1,4 @@
-package exception;
+package com.example.Proyecto_Mingeso.exception;
 
 public class StorageException extends RuntimeException {
 

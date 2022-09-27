@@ -1,4 +1,4 @@
-package Models;
+package com.example.Proyecto_Mingeso.Models;
 
 
 import com.sun.istack.NotNull;

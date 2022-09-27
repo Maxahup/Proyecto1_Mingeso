@@ -1,7 +1,7 @@
-package Services;
+package com.example.Proyecto_Mingeso.Services;
 
-import exception.FileNotFoundException;
-import exception.StorageException;
+import com.example.Proyecto_Mingeso.exception.FileNotFoundException;
+import com.example.Proyecto_Mingeso.exception.StorageException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;

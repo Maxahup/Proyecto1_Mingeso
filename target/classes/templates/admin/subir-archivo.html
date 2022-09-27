@@ -11,11 +11,16 @@
     <title>Cargar registro</title>
 </head>
 <body>
-    <h1>Cargar registro data</h1>
-    <div class="container">
-        <form action="" method="post" enctype="multipart/form-data">
-            <input type="file" class="form-control" name="archivo">
-            <input type="submit">
+    <h1>Cargar Registro Empleados</h1>
+    <div class="container" my-5>
+        <form th:action="@{/admin/fichero/subir}" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="ruta" class="form-label">Ruta Archivo</label>
+                <input id="ruta" name="ruta" type="file" class="form-control">
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Cargar</button>
+            </div>
         </form>
     </div>
 </body>
