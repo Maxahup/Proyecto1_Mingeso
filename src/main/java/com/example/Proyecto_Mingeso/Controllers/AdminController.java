@@ -46,6 +46,35 @@ public class AdminController {
                 .addObject("rutaFichero", new Fichero());
 
     }
+    @PostMapping("/fichero/subir")
+    public String cargarArchivo(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+        uploadService.save(file);
+        msg.addAttribute("mensaje", "Archivo subido correctamente");
+
+        return "redirect:/index";
+    }
+    @GetMapping("/fichero/subir/justificar")
+    ModelAndView nuevaJustificacion(){
+        return new ModelAndView("admin/subir-justificativos").addObject("rutaFichero", new Fichero());
+    }
+    @PostMapping("/fichero/subir/justificar")
+    public String cargarJustificaciones(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+        uploadService.save(file);
+        msg.addAttribute("mensaje", "Archivo de justificaciones subido correctamente");
+
+        return "redirect:/index";
+    }
+    @GetMapping("/fichero/subir/autorizar")
+    ModelAndView nuevaAutorizacion(){
+        return new ModelAndView("admin/subir-autorizaciones").addObject("rutaFichero", new Fichero());
+    }
+    @PostMapping("/fichero/subir/autorizar")
+    public String cargarAutorizacion(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+        uploadService.save(file);
+        msg.addAttribute("mensaje", "Archivo de justificaciones subido correctamente");
+
+        return "redirect:/index";
+    }
     /*
     @PostMapping("/fichero/subir")
     ModelAndView cargarArchivo(@Validated Fichero fichero, BindingResult bindingResult, RedirectAttributes){
@@ -60,11 +89,5 @@ public class AdminController {
         return new ModelAndView("redirect:/admin");
     }
     */
-    @PostMapping("/fichero/subir")
-    public String cargarArchivo(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
-        uploadService.save(file);
-        msg.addAttribute("mensaje", "Archivo subido correctamente");
 
-        return "redirect:/index";
-    }
 }
