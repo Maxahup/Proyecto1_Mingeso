@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 
 @Service
 public class UploadService {
-    private String carpeta="com/example/Proyecto_Mingeso/Data_Files";
+    private String carpeta="src/main/java/com/example/Proyecto_Mingeso/Data_Files//";
     private final Logger logg = LoggerFactory.getLogger(UploadService.class);
 
     public String save(MultipartFile file) {
