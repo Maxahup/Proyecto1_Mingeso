@@ -10,6 +10,7 @@ import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.PostConstruct;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -17,6 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Scanner;
 
 @Service
 public class FileSystemStorageService implements StorageService {
@@ -83,4 +85,12 @@ public class FileSystemStorageService implements StorageService {
         }
 
     }
+    /*
+    public void generatePayment() throws java.io.FileNotFoundException {
+        File registro = new File("com/example/Proyecto_Mingeso/Data_Files/data.txt");
+        Scanner obj = new Scanner(registro);
+        while ()
+    }
+
+     */
 }

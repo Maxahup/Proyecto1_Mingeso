@@ -33,23 +33,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/fichero/subir/autorizar">Subir Autorizaciones</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin/fichero/subir/pagos">Generar reporte Sueldos</a>
-                </li>
             </ul>
 
         </div>
     </div>
 </nav>
-    <h1>Cargar Registro Empleados</h1>
+    <h1>Subir autorizaciones de horas extras</h1>
     <div class="container" my-5>
-        <form th:action="@{/admin/fichero/subir}" method="post" enctype="multipart/form-data">
+        <form th:action="@{/admin/fichero/subir/autorizar}" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="ruta" class="form-label">Ruta Archivo</label>
                 <input id="ruta" name="ruta" type="file" class="form-control">
             </div>
             <div class="text-end">
-                <button type="submit" class="btn btn-primary">Cargar</button>
+                <button type="submit" class="btn btn-primary">Subir</button>
             </div>
         </form>
     </div>

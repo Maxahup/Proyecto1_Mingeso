@@ -47,33 +47,33 @@ public class AdminController {
 
     }
     @PostMapping("/fichero/subir")
-    public String cargarArchivo(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+    public ModelAndView cargarArchivo(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
         uploadService.save(file);
         msg.addAttribute("mensaje", "Archivo subido correctamente");
 
-        return "redirect:/index";
+        return new ModelAndView("index");
     }
     @GetMapping("/fichero/subir/justificar")
     ModelAndView nuevaJustificacion(){
         return new ModelAndView("admin/subir-justificativos").addObject("rutaFichero", new Fichero());
     }
     @PostMapping("/fichero/subir/justificar")
-    public String cargarJustificaciones(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+    public ModelAndView cargarJustificaciones(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
         uploadService.save(file);
         msg.addAttribute("mensaje", "Archivo de justificaciones subido correctamente");
 
-        return "redirect:/index";
+        return new ModelAndView("index");
     }
     @GetMapping("/fichero/subir/autorizar")
     ModelAndView nuevaAutorizacion(){
         return new ModelAndView("admin/subir-autorizaciones").addObject("rutaFichero", new Fichero());
     }
     @PostMapping("/fichero/subir/autorizar")
-    public String cargarAutorizacion(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
+    public ModelAndView cargarAutorizacion(@RequestParam("ruta")MultipartFile file, RedirectAttributes msg){
         uploadService.save(file);
         msg.addAttribute("mensaje", "Archivo de justificaciones subido correctamente");
 
-        return "redirect:/index";
+        return new ModelAndView("index");
     }
     /*
     @PostMapping("/fichero/subir")
