@@ -185,29 +185,6 @@ public class Empleado {
         this.sueldo_liquido = sueldo_liquido;
     }
 
-    /*
-    @Id
-    @Column(name = "id")
-    private Integer id;
-    @NotNull
-    private String Nombres;
-    @NotNull
-    private String Apellidos;
-    @NotNull
-    private String Rut;
-    @NotNull
-    private char Categoria;
-    @NotNull
-    private float Sueldo_bruto;
-    @NotNull
-    private int anno_contratacion;
-    @NotNull
-    private int mes_contratacion;
-    private float desc_atrasos;
-    private float bonificacion;
-    private float desc_cotizacion;
-    private float sueldo_liquido;
 
-     */
 
 }

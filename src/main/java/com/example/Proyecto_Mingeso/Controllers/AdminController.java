@@ -75,19 +75,6 @@ public class AdminController {
 
         return new ModelAndView("index");
     }
-    /*
-    @PostMapping("/fichero/subir")
-    ModelAndView cargarArchivo(@Validated Fichero fichero, BindingResult bindingResult, RedirectAttributes){
-        if (bindingResult.hasErrors() || fichero.getRutaFichero().isEmpty()){
-            if (fichero.getRutaFichero().isEmpty()){
-                bindingResult.rejectValue("archivo", "MultipartNotEmpty");
-            }
-            return new ModelAndView ("admin/subir-archivo")
-                    .addObject("rutaFichero", fichero);
-        }
-        String rutaArchivo = fileSystemStorageService.storage(fichero.);
-        return new ModelAndView("redirect:/admin");
-    }
-    */
+
 
 }
